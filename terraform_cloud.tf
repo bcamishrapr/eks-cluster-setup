@@ -1,10 +1,10 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "proficloud"
+    organization = "my-organization"
 
     workspaces {
-      prefix = "proficloud-infra-"
+      prefix = "prasoon-wp"
     }
   }
 }
