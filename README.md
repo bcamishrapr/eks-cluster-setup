@@ -1,2 +1,2 @@
-# proficloud-infrastructure-eks
-Repository for proficloud infrastructure eks cluster
+# infrastructure-eks
+Repository for  infrastructure eks cluster
