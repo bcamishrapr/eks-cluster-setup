@@ -1,2 +1,2 @@
-# eks-cluster-setup
-Repository containing eks cluster setup using terraform
+# proficloud-infrastructure-eks
+Repository for proficloud infrastructure eks cluster
