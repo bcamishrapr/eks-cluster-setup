@@ -76,7 +76,7 @@ module "eks" {
   aws_auth_roles = [
     {
       rolearn  = var.aws_eks_role_arn
-      username = "ssoawsadmin"
+      username = "yourroleusername"
       groups   = ["system:masters"]
     }
   ]
