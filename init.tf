@@ -1,5 +1,8 @@
 provider "aws" {
   region = var.region
+  #THIS KEY SHOULD CONFIGURED IN TF-WORKSPACE
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
 }
 
 data "aws_eks_cluster" "cluster" {
@@ -19,7 +22,7 @@ data "terraform_remote_state" "eks_ws_state" {
     }
   }
 }  
-
+  
 provider "kubernetes" {
   host                   = data.aws_eks_cluster.cluster.endpoint
   cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)
@@ -34,3 +37,11 @@ provider "helm" {
     token                  = data.kubernetes_secret.helm_secret.data.token
   }
 }
+    
+#IF YOU INSTALL GRAFANA HELM CHART ALSO   
+    
+#provider "grafana" {
+  #url  = var.grafana_url
+  #auth = var.grafana_auth
+#}*/
+    
