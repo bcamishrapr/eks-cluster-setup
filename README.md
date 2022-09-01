@@ -1,2 +1,2 @@
-# infrastructure-eks
-Repository for  infrastructure eks cluster
+# TEST-EKS
+Repository for  TEST eks cluster setup with terraform configuration
